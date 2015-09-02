@@ -1,21 +1,18 @@
 {
   "name": "will.mk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal website for will.mk",
   "scripts": {
     "prebuild": "rm -rf ./build && mkdir ./build",
     "build": "./node_modules/postcss-cli/bin/postcss -u autoprefixer -c ./postcss.json ./style.css | ./node_modules/clean-css/bin/cleancss -o ./build/style.css",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp index.html CNAME ./build",
     "deploy": "cd build && surge"
   },
-  "keywords": [],
-  "author": "",
+  "author": "William Monk",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^5.2.0",
     "clean-css": "^3.4.1",
-    "postcss": "^5.0.4",
     "postcss-cli": "^2.1.0"
   }
 }
