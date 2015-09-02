@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Personal website for will.mk",
   "scripts": {
+      "start": "http-server",
     "prebuild": "rm -rf ./build && mkdir ./build",
     "build": "./node_modules/postcss-cli/bin/postcss -u autoprefixer -c ./postcss.json ./style.css | ./node_modules/clean-css/bin/cleancss -o ./build/style.css",
     "predeploy": "npm run build && cp index.html CNAME ./build",
-    "deploy": "cd build && surge"
+    "deploy": "cd build && surge && cd ../ && rm -rf build"
   },
   "author": "William Monk",
   "license": "ISC",
