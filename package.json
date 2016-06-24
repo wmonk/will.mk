@@ -5,7 +5,7 @@
   "scripts": {
     "start": "http-server",
     "prebuild": "rm -rf ./build && mkdir ./build",
-    "build": "./node_modules/postcss-cli/bin/postcss -u autoprefixer -c ./postcss.json ./style.css | ./node_modules/clean-css/bin/cleancss -o ./build/style.css",
+    "build": "postcss -u autoprefixer -c ./postcss.json ./style.css | cleancss -o ./build/style.css",
     "predeploy": "npm run build && cp index.html CNAME favicon.ico ./build",
     "deploy": "npm version minor && cd build && surge && cd ../ && rm -rf build"
   },
