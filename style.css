@@ -1,145 +1,63 @@
 body {
-    margin: 0;
-}
-
-.container {
-    margin: 25px 5%;
-    font-family: Lato;
-    font-size: 16px;
-    color: #66727F;
+    margin: 50px;
     max-width: 700px;
-    line-height: 1.7;
-}
-
-a:active {
-    text-decoration: underline;
-    outline: none;
+    color: #362C2C;
+    font-family: "Cabin";
 }
 
 h1 {
-    margin: 40px 0 15px;
-    font-size: 1.4em;
-}
-
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
-
-header {
-    line-height: 37px;
+    font-family: "Work Sans";
     font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
 }
 
-header.main {
-    margin-bottom: 30px;
+.blurb {
+    font-size: 25px;
+    line-height: 1.5;
 }
 
-h2 {
-    margin: 20px 0 10px;
-    font-size: 1.2em;
+.title {
+    display: inline-block;
+    width: 35px;
+    font-size: 20px;
 }
 
-.col p:first-child {
-    margin-top: 0;
-}
-
-a {
-    color: #6D8EB3;
-    text-decoration: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-li {
-    margin-bottom: 20px;
-}
-
-ul a {
-    font-weight: bold;
-}
-
-ul p {
-    margin: 0;
-}
-
-.right {
-    float: right;
-}
-
-svg {
+div.title {
+    line-height: 37.5px;
+    height: 100px;
     float: left;
 }
 
-a:hover {
-    text-decoration: underline;
+a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    transition: border 200ms;
 }
 
-path {
-    stroke-dasharray: 0;
-    stroke-dashoffset: 0;
+.lr {
+    color: #381272;
 }
 
-section {
-    margin-bottom: 25px;
+.lr:hover {
+    border-bottom-color: #381272;
 }
 
-@media only screen and (min-width: 500px) {
-    header {
-        margin-bottom: 30px;
-    }
-
-    section header {
-        float: left;
-        width: 30%;
-        line-height: 1.7;
-    }
-
-    .col {
-        float: left;
-        width: 70%;
-    }
-
-    section {
-        margin-bottom: 50px;
-    }
+.saa {
+    color: #6CBEA6;
 }
 
-@media only screen and (min-width: 700px) {
-    .container {
-        margin: 50px auto;
-    }
+.saa:hover {
+    border-bottom-color: #6CBEA6;
 }
 
-path {
-    stroke-dasharray: 355px;
-    animation: dash 1.3s cubic-bezier(.78, .14, .43, .86);
-    animation-fill-mode: backwards;
-    animation-play-state: running;
+.pkd {
+    color: #1EC1A6;
 }
 
-@keyframes dash {
-    0% {
-        opacity: 0;
-        stroke-dashoffset: 355;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
+.pkd:hover {
+    border-bottom-color: #1EC1A6;
 }
