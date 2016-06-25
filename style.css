@@ -15,6 +15,16 @@ h1 {
 .blurb {
     font-size: 25px;
     line-height: 1.5;
+    display: flex;
+    margin: 20px 0;
+}
+
+.previous {
+    display: flex;
+}
+
+.previous a {
+    display: inline;
 }
 
 .title {
@@ -24,9 +34,9 @@ h1 {
 }
 
 div.title {
+    flex: 1;
+    min-width: 35px;
     line-height: 37.5px;
-    height: 100px;
-    float: left;
 }
 
 a {
