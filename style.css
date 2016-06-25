@@ -23,8 +23,13 @@ h1 {
     display: flex;
 }
 
-.previous a {
-    display: inline;
+.previous .title {
+    flex-shrink: 1;
+    line-height: 16px;
+}
+
+.previous div:nth-child(2) {
+    flex-grow: 9;
 }
 
 .title {
