@@ -1,6 +1,6 @@
 {
   "name": "will.mk",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "Personal website for will.mk",
   "scripts": {
     "start": "http-server",
