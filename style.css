@@ -1,6 +1,6 @@
 body {
     margin: 50px;
-    max-width: 700px;
+    max-width: 930px;
     color: #362C2C;
     font-family: "Cabin";
 }
@@ -8,12 +8,15 @@ body {
 h1 {
     font-family: "Work Sans";
     font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
+    /* font-size: 20px; */
+    font-size: 30px;
+    /* line-height: 25px; */
+    line-height: 37.5px;
 }
 
 .blurb {
-    font-size: 25px;
+    /* font-size: 25px; */
+    font-size: 38px;
     line-height: 1.5;
     display: flex;
     margin: 50px 0;
@@ -21,11 +24,13 @@ h1 {
 
 .previous {
     display: flex;
+    font-size: 20px;
 }
 
 .previous .title {
     flex-shrink: 1;
-    line-height: 16px;
+    /* line-height: 16px; */
+    line-height: 24px;
 }
 
 .previous div:nth-child(2) {
@@ -34,16 +39,11 @@ h1 {
 
 .title {
     display: inline-block;
-    width: 35px;
-    font-size: 20px;
+    width: 45px;
+    /* font-size: 20px; */
+    font-size: 30px;
     animation-delay: 1s;
     animation-duration: 2s;
-    animation-name: colorize;
-    animation-timing-funciton: ease-in-out;
-    animation-iteration-count: 1;
-    -webkit-filter: grayscale(100%);
-    animation-fill-mode: forwards;
-    filter: grayscale(100%);
 }
 
 @keyframes colorize {
@@ -59,8 +59,8 @@ h1 {
 
 div.title {
     flex: 1;
-    min-width: 35px;
-    line-height: 37.5px;
+    min-width: 45px;
+    line-height: 57.5px;
 }
 
 a {
@@ -70,6 +70,14 @@ a {
     border-bottom-style: solid;
     border-bottom-color: transparent;
     transition: border 200ms;
+}
+
+.sbg {
+    color: #2e68da;
+}
+
+.sbg:hover {
+    border-bottom-color: #2e68da;
 }
 
 .lr {
@@ -94,4 +102,25 @@ a {
 
 .pkd:hover {
     border-bottom-color: #1EC1A6;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .blurb {
+        font-size: 25px;
+    }
+    .previous .title {
+        line-height: 16px;
+    }
+    .title, div.title {
+        /* display: none; */
+        line-height: 2;
+        display: inline-block;
+        min-width: 30px;
+        max-width: 30px;
+        font-size: 20px;
+    }
 }
