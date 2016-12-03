@@ -80,7 +80,7 @@ class App extends Component {
                 <div>
                     Previously at: &nbsp;
                     {Object.keys(insides).slice(1).map(insideId => {
-                        const { href, title, id: cx } = insides[insideId];
+                        const { href, title, id: cx = insideId } = insides[insideId];
                         return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === insideId && "selected"}`} target="_blank">{title}</a>);
                     }).reduce((arr, link, i) => {
                         if (!Array.isArray(arr)) {
