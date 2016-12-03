@@ -1,21 +1,20 @@
 {
-  "name": "will.mk",
-  "version": "1.22.0",
-  "description": "Personal website for will.mk",
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
   "scripts": {
-    "start": "http-server",
-    "prebuild": "rm -rf ./build && mkdir ./build",
-    "build": "postcss -u autoprefixer -c ./postcss.json ./style.css | cleancss -o ./build/style.css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build && cp index.html CNAME favicon.ico ./build",
     "deploy": "npm version minor && cd build && surge && cd ../ && rm -rf build"
-  },
-  "author": "William Monk",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^5.2.0",
-    "clean-css": "^3.4.1",
-    "http-server": "^0.9.0",
-    "postcss-cli": "^2.1.0",
-    "surge": "^0.18.0"
   }
 }

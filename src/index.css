@@ -15,11 +15,15 @@ h1 {
 }
 
 .blurb {
-    /* font-size: 25px; */
     font-size: 38px;
     line-height: 1.5;
     display: flex;
     margin: 50px 0;
+}
+
+.smaller {
+    font-size: 25px;
+    padding-top: 12px;
 }
 
 .previous {
@@ -76,7 +80,7 @@ a {
     color: #2e68da;
 }
 
-.sbg:hover {
+.sbg:hover, .sbg.selected {
     border-bottom-color: #2e68da;
 }
 
@@ -84,7 +88,7 @@ a {
     color: #381272;
 }
 
-.lr:hover {
+.lr:hover, .lr.selected {
     border-bottom-color: #381272;
 }
 
@@ -92,7 +96,7 @@ a {
     color: #6CBEA6;
 }
 
-.saa:hover {
+.saa:hover, .saa.selected {
     border-bottom-color: #6CBEA6;
 }
 
@@ -100,7 +104,7 @@ a {
     color: #1EC1A6;
 }
 
-.pkd:hover {
+.pkd:hover, .pkd.selected {
     border-bottom-color: #1EC1A6;
 }
 
@@ -122,5 +126,8 @@ a {
         min-width: 30px;
         max-width: 30px;
         font-size: 20px;
+    }
+    .smaller {
+        padding-top: 0;
     }
 }
