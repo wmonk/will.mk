@@ -46,7 +46,7 @@ class App extends Component {
         this.handleClick = this.handleClick.bind(this);
         const id = window.location.pathname.replace(/.+\//g, '') || 'default';
         if ((insides[id] || {}).text) {
-            this.state = { insides[id].id };
+            this.state = { id };
         } else {
             this.state = { id: 'default' }
             window.history.replaceState({ id: 'default' }, '', '/');
@@ -81,7 +81,7 @@ class App extends Component {
                     Previously at: &nbsp;
                     {Object.keys(insides).slice(1).map(insideId => {
                         const { href, title, id: cx } = insides[insideId];
-                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === cx && "selected"}`} target="_blank">{title}</a>);
+                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === insideId && "selected"}`} target="_blank">{title}</a>);
                     }).reduce((arr, link, i) => {
                         if (!Array.isArray(arr)) {
                             return [arr, <span>,&nbsp;</span>, link];
