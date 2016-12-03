@@ -12,7 +12,7 @@ const insides = {
         text: "Contract software engineer in London, currently helping The Trainline (via YLD) replatform their frontend experience, using Typescript, React, Redux, and Node.",
         emoji: "🚋"
     },
-    sbg: {
+    skybet: {
         text: "I joined Sky Betting & Gaming to help them rebuild and modernise their frontend stack. Using technology such as React, Redux, ImmutableJS, Webpack, and Node.js.\nI worked on rebuilding existing parts of the website with React, as well as building reusable components for a company wide ui-library. To make a full component slice I also advised on API response structure to best fit the consumption on the client.",
         emoji: "⚽️",
         size: "smaller",
@@ -20,7 +20,7 @@ const insides = {
         title: "Sky Betting & Gaming",
         url: "/work/skybet"
     },
-    lr: {
+    laterooms: {
         text: "While at Laterooms.com, I worked on two re-platforming projects. Both of these projects were built fully responsively and mobile first, ensuring that there was no need for a mobile website any more. The other important factor was to make the code base easy to change, quick to deploy to live, and be smart enough to fail this process if there was an issue.",
         emoji: "🏨",
         size: "smaller",
