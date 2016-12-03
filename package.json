@@ -16,6 +16,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build && cp CNAME favicon.ico ./build",
-    "deploy": "npm version minor && cd build && surge && cd ../ && rm -rf build"
+    "deploy": "npm version minor && cd build && cp index.html 200.html && surge && cd ../ && rm -rf build"
   }
 }
