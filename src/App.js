@@ -42,7 +42,7 @@ class App extends Component {
     constructor() {
         super();
         this.handleClick = this.handleClick.bind(this);
-        const id = window.location.pathname.replace('/', '') || 'default';
+        const id = window.location.pathname.replace(/.+\//g, '') || 'default';
         if ((insides[id] || {}).text) {
             this.state = { id };
         } else {
