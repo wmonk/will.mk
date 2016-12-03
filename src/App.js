@@ -46,7 +46,7 @@ class App extends Component {
         this.handleClick = this.handleClick.bind(this);
         const id = window.location.pathname.replace(/.+\//g, '') || 'default';
         if ((insides[id] || {}).text) {
-            this.state = { id };
+            this.state = { insides[id].id };
         } else {
             this.state = { id: 'default' }
             window.history.replaceState({ id: 'default' }, '', '/');
