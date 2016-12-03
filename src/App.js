@@ -15,6 +15,7 @@ const insides = {
     skybet: {
         text: "I joined Sky Betting & Gaming to help them rebuild and modernise their frontend stack. Using technology such as React, Redux, ImmutableJS, Webpack, and Node.js.\nI worked on rebuilding existing parts of the website with React, as well as building reusable components for a company wide ui-library. To make a full component slice I also advised on API response structure to best fit the consumption on the client.",
         emoji: "⚽️",
+        id: "sbg",
         size: "smaller",
         href: "https://m.skybet.com",
         title: "Sky Betting & Gaming",
@@ -23,6 +24,7 @@ const insides = {
     laterooms: {
         text: "While at Laterooms.com, I worked on two re-platforming projects. Both of these projects were built fully responsively and mobile first, ensuring that there was no need for a mobile website any more. The other important factor was to make the code base easy to change, quick to deploy to live, and be smart enough to fail this process if there was an issue.",
         emoji: "🏨",
+        id: "lr",
         size: "smaller",
         href: "http://laterooms.com",
         title: "Laterooms.com",
@@ -78,8 +80,8 @@ class App extends Component {
                 <div>
                     Previously at: &nbsp;
                     {Object.keys(insides).slice(1).map(insideId => {
-                        const { href, title } = insides[insideId];
-                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${insideId} ${id === insideId && "selected"}`} target="_blank">{title}</a>);
+                        const { href, title, id: cx } = insides[insideId];
+                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === cx && "selected"}`} target="_blank">{title}</a>);
                     }).reduce((arr, link, i) => {
                         if (!Array.isArray(arr)) {
                             return [arr, <span>,&nbsp;</span>, link];
