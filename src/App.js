@@ -36,7 +36,7 @@ const insides = {
     },
     pkd: {
         title: "PKD",
-        href: "http://pkd.com"
+        href: "http://pkd.co.uk"
     }
 }
 
