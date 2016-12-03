@@ -14,6 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^5.2.0",
     "clean-css": "^3.4.1",
+    "http-server": "^0.9.0",
     "postcss-cli": "^2.1.0"
   }
 }
