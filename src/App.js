@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 
 const Blurb = ({ emoji, text, size = "" }) => (
     <div className="blurb">
@@ -10,7 +9,8 @@ const Blurb = ({ emoji, text, size = "" }) => (
 const insides = {
     default: {
         text: "Contract software engineer in London, currently helping The Trainline (via YLD) replatform their frontend experience, using Typescript, React, Redux, and Node.",
-        emoji: "🚋"
+        emoji: "🚋",
+        url: "/"
     },
     skybet: {
         text: "I joined Sky Betting & Gaming to help them rebuild and modernise their frontend stack. Using technology such as React, Redux, ImmutableJS, Webpack, and Node.js.\nI worked on rebuilding existing parts of the website with React, as well as building reusable components for a company wide ui-library. To make a full component slice I also advised on API response structure to best fit the consumption on the client.",
@@ -73,6 +73,8 @@ class App extends Component {
         const { id } = this.state;
         const { emoji, text, size } = insides[id];
         return (<div>
+            <h1><span className="title">{ id !== 'default' ? <a href="#" onClick={e => this.handleClick(e, 'default')}>←</a> : '🐵'}</span>Will Monk </h1>
+
             <Blurb text={text} emoji={emoji} size={size} />
 
             <div className="previous">
