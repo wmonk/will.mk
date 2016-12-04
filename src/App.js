@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Blurb = ({ emoji, text, size = "" }) => (
-    <div className="blurb">
-        <div className="title">{emoji}</div>
-        <div className={size}>{text}</div>
-    </div>
+    <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}>
+        <div key={emoji} className="blurb">
+            <div className="title">{emoji}</div>
+            <div className={size}>{text}</div>
+        </div>
+    </ReactCSSTransitionGroup>
 );
 const insides = {
     default: {
@@ -73,9 +79,10 @@ class App extends Component {
         const { id } = this.state;
         const { emoji, text, size } = insides[id];
         return (<div>
-            <h1><span className="title">{ id !== 'default' ? <a href="#" onClick={e => this.handleClick(e, 'default')}>←</a> : '🐵'}</span>Will Monk </h1>
+            <h1><span className="title">{id !== 'default' ? <a href="#" onClick={e => this.handleClick(e, 'default')}>←</a> : '🐵'}</span>Will Monk </h1>
 
-            <Blurb text={text} emoji={emoji} size={size} />
+            <div style={{ position: 'relative' }}>
+            <Blurb text={text} emoji={emoji} size={size} /></div>
 
             <div className="previous">
                 <div className="title">🎉</div>
@@ -83,7 +90,7 @@ class App extends Component {
                     Previously at: &nbsp;
                     {Object.keys(insides).slice(1).map(insideId => {
                         const { href, title, id: cx = insideId } = insides[insideId];
-                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === insideId && "selected"}`} target="_blank">{title}</a>);
+                        return (<a href={href} onClick={e => this.handleClick(e, insideId)} className={`${cx} ${id === insideId && "selected"}`} target="_blank">{title}<span>{insideId.match(/saa|pkd/g) && ' ↗'}</span></a>);
                     }).reduce((arr, link, i) => {
                         if (!Array.isArray(arr)) {
                             return [arr, <span>,&nbsp;</span>, link];

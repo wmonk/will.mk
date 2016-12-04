@@ -27,7 +27,7 @@ h1 a {
 
 .smaller {
     font-size: 25px;
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 .previous {
@@ -43,6 +43,10 @@ h1 a {
 
 .previous div:nth-child(2) {
     flex-grow: 9;
+}
+
+.previous a span {
+    font-size: 11px;
 }
 
 .title {
@@ -134,4 +138,24 @@ a {
     .smaller {
         padding-top: 0;
     }
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 700ms ease-in;
+}
+
+.example-leave {
+    display: none;
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    /* display: none; */
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }
