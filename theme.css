@@ -1,0 +1,169 @@
+body {
+  background: #E5E5EC;
+  font-size: 18px;
+  font-family: "Overpass Mono";
+  color: #001850;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.markdown-body {
+  width: 600px;
+  margin: 0 auto;
+}
+
+p code {
+  background: #C7C7D7;
+  padding: 3px 6px;
+  color: #5E8093;
+}
+
+a {
+  color: #306FFF;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 0 solid transparent;
+  transition: 200ms border;
+}
+
+a:hover {
+  border-bottom: 1px solid #306FFF;
+}
+
+ol, ul {
+  margin-left: 20px;
+  font-size: 0.9em;
+}
+
+
+.hljs-tomorrow-comment, pre .javascript .hljs-comment, pre .javascript .hljs-title {
+  color: #7285b7;
+}
+
+.hljs-tomorrow-red, pre .javascript .hljs-variable, pre .javascript .hljs-attribute, pre .javascript .hljs-tag, pre .javascript .hljs-regexp, pre .javascript .hljs-ruby .hljs-constant, pre .javascript .hljs-xml .hljs-tag .hljs-title, pre .javascript .hljs-xml .hljs-pi, pre .javascript .hljs-xml .hljs-doctype, pre .javascript .hljs-html .hljs-doctype, pre .javascript .hljs-css .hljs-id, pre .javascript .hljs-css .hljs-class, pre .javascript .hljs-css .hljs-pseudo {
+  color: #ff9da4;
+}
+
+.hljs-tomorrow-orange, pre .javascript .hljs-number, pre .javascript .hljs-pre .javascriptprocessor, pre .javascript .hljs-built_in, pre .javascript .hljs-literal, pre .javascript .hljs-params, pre .javascript .hljs-constant {
+  color: #ffc58f;
+}
+
+.hljs-tomorrow-yellow, pre .javascript .hljs-class, pre .javascript .hljs-ruby .hljs-class .hljs-title, pre .javascript .hljs-css .hljs-rules .hljs-attribute {
+  color: #ffeead;
+}
+
+.hljs-tomorrow-green, pre .javascript .hljs-string, pre .javascript .hljs-value, pre .javascript .hljs-inheritance, pre .javascript .hljs-header, pre .javascript .hljs-ruby .hljs-symbol, pre .javascript .hljs-xml .hljs-cdata {
+  color: #d1f1a9;
+}
+
+.hljs-tomorrow-aqua, pre .javascript .hljs-css .hljs-hexcolor {
+  color: #99ffff;
+}
+
+.hljs-tomorrow-blue, pre .javascript .hljs-function, pre .javascript .hljs-python .hljs-decorator, pre .javascript .hljs-python .hljs-title, pre .javascript .hljs-ruby .hljs-function .hljs-title, pre .javascript .hljs-ruby .hljs-title .hljs-keyword, pre .javascript .hljs-perl .hljs-sub, pre .javascript .hljs-javascript .hljs-title, pre .javascript .hljs-coffeescript .hljs-title {
+  color: #bbdaff;
+}
+
+.hljs-tomorrow-purple, pre .javascript .hljs-keyword, pre .javascript .hljs-javascript .hljs-function {
+  color: #ebbbff;
+}
+
+pre .javascript {
+  background: #002451;
+  color: white;
+  position: relative;
+}
+
+pre code:before {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+pre .javascript:before {
+  content: 'js';
+}
+
+.hljs-tomorrow-comment, pre .elm .hljs-comment, pre .elm .hljs-title {
+  color: #969896;
+}
+
+.hljs-tomorrow-red, pre .elm .hljs-variable, pre .elm .hljs-attribute, pre .elm .hljs-tag, pre .elm .hljs-regexp, pre .elm .hljs-ruby .hljs-constant, pre .elm .hljs-xml .hljs-tag .hljs-title, pre .elm .hljs-xml .hljs-pi, pre .elm .hljs-xml .hljs-doctype, pre .elm .hljs-html .hljs-doctype, pre .elm .hljs-css .hljs-id, pre .elm .hljs-css .hljs-class, pre .elm .hljs-css .hljs-pseudo {
+  color: #d54e53;
+}
+
+.hljs-tomorrow-orange, pre .elm .hljs-number, pre .elm .hljs-pre .elmprocessor, pre .elm .hljs-built_in, pre .elm .hljs-literal, pre .elm .hljs-params, pre .elm .hljs-constant {
+  color: #e78c45;
+}
+
+.hljs-tomorrow-yellow, pre .elm .hljs-class, pre .elm .hljs-ruby .hljs-class .hljs-title, pre .elm .hljs-css .hljs-rules .hljs-attribute {
+  color: #e7c547;
+}
+
+.hljs-tomorrow-green, pre .elm .hljs-string, pre .elm .hljs-value, pre .elm .hljs-inheritance, pre .elm .hljs-header, pre .elm .hljs-ruby .hljs-symbol, pre .elm .hljs-xml .hljs-cdata {
+  color: #b9ca4a;
+}
+
+.hljs-tomorrow-aqua, pre .elm .hljs-css .hljs-hexcolor {
+  color: #70c0b1;
+}
+
+.hljs-tomorrow-blue, pre .elm .hljs-function, pre .elm .hljs-python .hljs-decorator, pre .elm .hljs-python .hljs-title, pre .elm .hljs-ruby .hljs-function .hljs-title, pre .elm .hljs-ruby .hljs-title .hljs-keyword, pre .elm .hljs-perl .hljs-sub, pre .elm .hljs-javascript .hljs-title, pre .elm .hljs-coffeescript .hljs-title {
+  color: #7aa6da;
+}
+
+.hljs-tomorrow-purple, pre .elm .hljs-keyword, pre .elm .hljs-javascript .hljs-function {
+  color: #c397d8;
+}
+
+pre .elm {
+  color: #eaeaea;
+  background: black;
+  position: relative;
+}
+
+pre .elm:before {
+  content: 'elm';
+}
+
+pre code {
+  display: block;
+  line-height: 1.5;
+  padding: 10px;
+  font-family: "Overpass Mono";
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 25px !important;
+}
+
+pre {
+  width: 125%;
+  margin: 0;
+  margin-left: -12.5%;
+  border none;
+}
+
+pre + pre {
+  /* margin-top: 20px; */
+}
+
+@media screen and (max-width: 700px) {
+  .markdown-body {
+    width: 90%;
+    margin: 5%;
+  }
+
+  pre {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  code {
+    overflow: scroll;
+  }
+}
