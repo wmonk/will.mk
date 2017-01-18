@@ -4,7 +4,11 @@ html
     meta(charset='utf-8')
     title: !=title
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700')
-    link(rel='stylesheet' href='./theme.css')
+    | <style type="text/css">
+    include ./theme.css
+    include ./elm.theme.css
+    include ./js.theme.css
+    | </style>
   body
     .container
       .markdown-body

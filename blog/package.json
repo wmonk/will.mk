@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "reload -b& chokidar \"*.jade\" \"*.md\" -c \"time ghmd --template template.jade --dest index.html elm-react.md\""
+    "build": "npm run build:css & npm run build:md",
+    "build:md": "ghmd --template template.jade elm-react.md",
+    "build:html": "htmlminify elm-react.html > index.html",
+    "build:css": "postcss --output elm.theme.css --use postcss-nested elm.theme.pcss & postcss --output js.theme.css --use postcss-nested js.theme.pcss",
+    "prestart": "npm run build",
+    "start": "reload -b -v & chokidar \"*.jade\" \"*.md\" \"npm run build:md\" & chokidar \"*.pcss\" \"npm run build:css\" & chokidar \".html\" \"npm run build:html\""
   },
   "keywords": [],
   "author": "",
@@ -15,6 +20,9 @@
     "marked": "^0.3.6"
   },
   "devDependencies": {
+    "html-minify": "^0.3.2",
+    "postcss-cli": "^2.6.0",
+    "postcss-nested": "^1.0.0",
     "reload": "^1.1.0"
   }
 }
