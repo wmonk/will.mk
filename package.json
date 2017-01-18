@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.26.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0",
+    "surge": "^0.18.0"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-addons-css-transition-group": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build && cp CNAME favicon.ico ./build",
+    "deploy": "npm version minor && cd build && cp index.html 200.html && surge && cd ../ && rm -rf build"
+  }
+}
