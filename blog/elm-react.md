@@ -20,9 +20,24 @@ What this post won't do is:
 
 So, with that out of the way... The notes below assume that you have a working knowledge of react, used in conjunction with some state management implementation (redux, flux).
 
+### Architecture
+
+```text
++------+   action   +---------+
+| VIEW | +--------> | REDUCER |
++--+---+            +---+-----+
+   ^                    |
+   |                    |
+   +--------------------+
+
+
+```
+
 ### Modules
 
-This is pretty straight-forward in both React and Elm:
+#### Importing
+
+Importing modules in ES2015 and Elm is pretty straightforward; you can have both named and default exports in both:
 ```javascript
 import React from 'react';
 import { log } from 'logger';
@@ -35,18 +50,26 @@ import Debug exposing (log)
 import Html exposing (..)
 ```
 
-as you can see, while we might use `{ destructuring }` to import named exports in JavaScript, in Elm you can choose to explicitly import each named thing: `exposing (log, error)`, or to import them all into the module namespace: `exposing (..)`.
-
-```javascript
-export default Header;
-```
+As you can see, while we might use `{ destructuring }` to import named exports in JavaScript, in Elm you can choose to explicitly import each named thing: `exposing (log, error)`, or to import them all into the module namespace: `exposing (..)`. In Elm, if you import a module that has exposed values, but you don't provide the `exposing` part to the import, everything will be namespaced to the module name, e.g.
 
 ```elm
-module Header exposing (..)
+import Debug
+
+Debug.log "here"
 ```
 
-ome test
+#### Exporting
 
+Exports work pretty similarly too:
+
+```javascript
+export const NAME = 'HEADER';
+export default Header;
+```
+```elm
+module Header exposing (view, name)
+type Name = HEADER
+```
 
 ### Syntax
 #### `|>`
@@ -70,3 +93,5 @@ ome test
 ### Views
 
 ### Updaters
+=======
+Rather than prefixing some value with `export` like in JS, you would use the `exposing` keyword when you define the module. If no values are exposed, then everything will have to be namespaced to your module name when imported. 

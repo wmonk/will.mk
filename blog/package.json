@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+<<<<<<< Updated upstream
     "build": "npm run build:css & npm run build:md",
     "build:md": "ghmd --template template.jade elm-react.md",
     "build:html": "htmlminify elm-react.html > index.html",
     "build:css": "postcss --output elm.theme.css --use postcss-nested elm.theme.pcss & postcss --output js.theme.css --use postcss-nested js.theme.pcss",
     "prestart": "npm run build",
     "start": "reload -b -v & chokidar \"*.jade\" \"*.md\" -c \"npm run build:md\" & chokidar \"*.pcss\" -c \"npm run build:css\" & chokidar \"elm-react.html\" -c \"npm run build:html\""
+=======
+    "build": "ghmd --template template.jade --dest index.html elm-react.md",
+    "prestart": "npm run build",
+    "start": "reload -v -b & chokidar \"*.jade\" \"*.md\" -c \"npm run build\""
+>>>>>>> Stashed changes
   },
   "keywords": [],
   "author": "",
