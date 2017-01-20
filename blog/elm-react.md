@@ -46,3 +46,27 @@ module Header exposing (..)
 ```
 
 ome test
+
+
+### Syntax
+#### `|>`
+#### `<|`
+#### `::`
+#### `:=`
+#### `++`
+#### `>>`
+#### `<<`
+#### maths
+
+### Types
+#### Records
+#### Lists
+#### Arrays
+#### Maybe
+#### Type
+
+### Model
+
+### Views
+
+### Updaters
