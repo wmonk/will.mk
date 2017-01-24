@@ -72,8 +72,29 @@ type Name = HEADER
 ```
 
 ### Syntax
-#### `|>`
+#### `|>` - Forward function application
+
+```javascript
+divide(2, subtract(5, (multiply(10, (add(10, 10));
+// 95.5
+```
+
+```elm
+add 10 10
+  |> flip multiply 10
+  |> flip subtract 5
+  |> flip divide 2
+-- 95.5
+```
 #### `<|`
+```javascript
+```
+```elm
+forward robot
+  |> turnLeft
+  |> forward
+  |> turnLeft
+```
 #### `::`
 #### `:=`
 #### `++`
@@ -93,5 +114,7 @@ type Name = HEADER
 ### Views
 
 ### Updaters
-=======
+
+----
+
 Rather than prefixing some value with `export` like in JS, you would use the `exposing` keyword when you define the module. If no values are exposed, then everything will have to be namespaced to your module name when imported. 

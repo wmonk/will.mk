@@ -1,8 +1,10 @@
 body {
   background: #E5E5EC;
   font-size: 18px;
-  font-family: "Overpass Mono";
+  font-family: Cabin;
   color: #001850;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 * {
@@ -14,7 +16,7 @@ body {
   margin: 0 auto;
 }
 
-p code {
+p code, h4 code {
   background: #C7C7D7;
   padding: 3px 6px;
   color: #5E8093;
