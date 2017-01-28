@@ -19,7 +19,18 @@ body {
 p code, h4 code {
   background: #C7C7D7;
   padding: 3px 6px;
+  margin: 0 3px;
   color: #5E8093;
+}
+
+blockquote {
+  border-left: 12px solid #cecedc;;
+  padding: 0 20px;
+  margin: 0;
+}
+
+h4 {
+  margin-top: 50px;
 }
 
 a {
