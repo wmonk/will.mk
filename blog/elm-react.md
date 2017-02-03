@@ -1,4 +1,4 @@
-## Elm for React Focussed People
+# Elm for React Focussed People
 
 Just before the Christmas break in 2016 I had the urge to build something. I didn't want to spend masses amounts of time on it, something I could get out in a couple of days. In the end I created [Relaweather](https://relaweather.com), a small _react_ application that compares the weather where you are today, with yesterdays. The idea being that one remembers how they felt yesterday, so should be better informed with how today should be!
 
@@ -20,22 +20,22 @@ What this post won't do is:
 
 So, with that out of the way... The notes below assume that you have a working knowledge of react, used in conjunction with some state management implementation (redux, flux).
 
-### Architecture
+## Architecture
 
 ```text
 +------+   action   +---------+
 | VIEW | +--------> | REDUCER |
 +--+---+            +---+-----+
-   ^                    |
+   ~^~                    |
    |                    |
    +--------------------+
 
 
 ```
 
-### Modules
+## Modules
 
-#### Importing
+### Importing
 
 Importing modules in ES2015 and Elm is pretty straightforward; you can have both named and default exports in both:
 
@@ -60,7 +60,7 @@ import Debug
 Debug.log "here"
 ```
 
-#### Exporting
+### Exporting
 
 Exports work pretty similarly too:
 
@@ -73,10 +73,10 @@ module Header exposing (view, name)
 type Name = HEADER
 ```
 
-### Syntax
+## Syntax
 These are some syntax things like look kind of scary to start with, but are incredibly useful.
 
-#### Currying
+### Currying
 While not really a syntax feature, currying is particularly important in functional languages, and is something that you need to understand to allow the following code samples to make sense. 
 
 > A curried function is one which will keep returning a function, delaying the execution, until it receives all of it's arguments. Arguments can be applied as many, or as few at a time, the function length permitting.
@@ -117,7 +117,7 @@ add : Number -> Number -> Number
 
 In the above you can consider the `->` a function, from the left type to the right type. In this case the function with take a `Number` argument, and return a `Number`. We will look at some more useful uses of currying later on, but for now understand when you see a function that _should_ take more that one argument provided with one, it is just returning another function.
 
-#### `|>` - Forward function application
+### `|>` - Forward function application
 Consider this piece of Elm code:
 
 ```elm
@@ -151,7 +151,7 @@ piper(10);
 // 210
 ```
 
-#### `<|` - Backward function application
+### `<|` - Backward function application
 This operator is very similar to the previous, just a backward version. 
 
 ```javascript
@@ -166,7 +166,7 @@ multiply 10 <| add 10 10
 
 Generally you see it use on a single line in Elm, unlike the forwards applicator.
 
-#### `::` - List `cons` (prepend)
+### `::` - List `cons` (prepend)
 ```javascript
 const people = ['rachel', 'monica'];
 const friends = ['ross'].concat(people);
@@ -178,14 +178,13 @@ friends = "ross" :: ["rachel", "monica"]
 -- ["ross", "rachel", "monica"]
 ```
 
-
-<sup>note how in Elm you have to use double quotes for string literals</sup>
+> §§§note how in Elm you have to use double quotes for string literals§§§
 
 `cons` is a function found in many functional programming languages, and is used to push a value to the head position of a List. Obvsiously in Elm where Lists are immutable, a new List is returned. In JavaScript you can use `arr.unshift`, but this will mutate the array, which we all know is bad!
 
 Ramda has both `prepend` (identical to `::`) and `append` methods.
  
-#### `++` - string and list concat
+### `++` - string and list concat
 ```javascript
 'hello ' + 'world!'
 // 'hello world!'
@@ -202,10 +201,10 @@ Ramda has both `prepend` (identical to `::`) and `append` methods.
 -- ["hello", "world"]
 ```
 
-#### `>>` - compose left to right
+### `>>` - compose left to right
 
-#### `<<` - compose right to left
-#### maths
+### `<<` - compose right to left
+### maths
 Javascript and Elms maths operators are pertty much identical. In Javascript all maths based functions are [`infix operators`](http://softwareengineering.stackexchange.com/a/2509), meaning they can only be used between two values:
 
 ```javascript
@@ -228,15 +227,15 @@ Elm is somewhat similar in that it's maths operators can be use in an infix posi
 ```
 
 
-### Types
-#### Records
-#### Lists
-#### Arrays
-#### Maybe
-#### Type
+## Types
+### Records
+### Lists
+### Arrays
+### Maybe
+### Type
 
-### Model
+## Model
 
-### Views
+## Views
 
-### Updaters
+## Updaters

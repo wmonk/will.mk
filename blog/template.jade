@@ -1,16 +1,23 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title: !=title
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700')
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cabin:400|Work+Sans:700')
-    | <style type="text/css">
-    include ./theme.css
-    include ./elm.theme.css
-    include ./js.theme.css
-    | </style>
-  body
-    .container
-      .markdown-body
-        !=content
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+    <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400|Work+Sans:700" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./theme.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./elm.theme.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./js.theme.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <div class="markdown-body">
+            {{{content}}}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,100 +1,126 @@
 body {
-  background: #E5E5EC;
-  font-size: 18px;
-  font-family: Cabin;
-  color: #001850;
-  font-size: 20px;
-  line-height: 1.5;
+    background: #E5E5EC;
+    font-size: 18px;
+    font-family: 'PT Serif';
+    color: #001850;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Work Sans';
+    position: relative;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+    padding-right: 5px;
+    margin-left: -20px;
+    color: #E5E5EC;
+    transition: 200ms color;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h1:hover a:hover, h2:hover a:hover, h3:hover a:hover, h4:hover a:hover, h5:hover a:hover {
+    text-decoration: none !important;
+    border: none;
+}
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a {
+    visibility: visible;
+    color: #B7BBC1;
+}
+
+p {
+    line-height: 1.9;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .markdown-body {
-  width: 600px;
-  margin: 0 auto;
+    width: 700px;
+    margin: 0 auto;
 }
 
-p code, h4 code {
-  background: #C7C7D7;
-  padding: 3px 6px;
-  margin: 0 3px;
-  color: #5E8093;
+p code, h3 code {
+    background: #C7C7D7;
+    padding: 3px 6px;
+    margin: 0 3px;
+    color: #5E8093;
 }
 
 blockquote {
-  border-left: 12px solid #cecedc;;
-  padding: 0 20px;
-  margin: 0;
+    border-left: 12px solid #cecedc;;
+    padding: 0 20px;
+    margin: 0;
 }
 
 h4 {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 a {
-  color: #306FFF;
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 0 solid transparent;
-  transition: 200ms border;
+    color: #306FFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 0 solid transparent;
+    transition: 200ms border;
 }
 
 a:hover {
-  border-bottom: 1px solid #306FFF;
+    border-bottom: 1px solid #306FFF;
 }
 
 ol,
 ul {
-  margin-left: 20px;
-  font-size: 0.9em;
+    margin-left: 20px;
+    font-size: 0.9em;
 }
 
 pre code:before {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-  text-transform: uppercase;
-  opacity: 0.5;
-  font-size: 0.8em;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 0.8em;
 }
 
 pre code {
-  display: block;
-  line-height: 1.5;
-  padding: 10px;
-  font-family: "Overpass Mono";
-  font-size: 0.8em;
-  font-weight: 300;
-  padding: 25px !important;
+    display: block;
+    line-height: 1.5;
+    padding: 10px;
+    font-family: "Overpass Mono";
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 25px !important;
 }
 
 pre {
-  width: 125%;
-  margin: 0;
-  margin-left: -12.5%;
-  border none;
+    width: 125%;
+    margin: 0;
+    margin-left: -12.5%;
+    border none;
 }
 
 pre + pre {
-  /* margin-top: 20px; */
+    /* margin-top: 20px; */
 }
 
 @media screen and (max-width: 700px) {
-  .markdown-body {
-    width: 90%;
-    margin: 5%;
-  }
+    .markdown-body {
+        width: 90%;
+        margin: 5%;
+    }
 
-  pre {
-    width: 100%;
-    margin-left: 0;
-  }
+    pre {
+        width: 100%;
+        margin-left: 0;
+    }
 
-  code {
-    overflow: scroll;
-  }
+    code {
+        overflow: scroll;
+    }
 
 }
 
